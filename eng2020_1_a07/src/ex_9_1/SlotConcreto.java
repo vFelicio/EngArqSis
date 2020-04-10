@@ -17,13 +17,13 @@ public abstract class SlotConcreto implements Slot {
 	public void processar(Moeda moeda) {
 		System.out.printf("**** Slot de %d diz: ", VALOR);
 		if (moeda.getValor() == VALOR) {
-			System.out.printf("moeda de %d aceita.\n", moeda.getValor());
+			System.out.printf("Moeda de %d aceita.\n", moeda.getValor());
 		} else if (this.slot != null) {
-			System.out.printf("não processo moedas de %d. Passando para %s\n",
+			System.out.printf("Processo apenas moedas de %d. Passando para %s\n",
 					VALOR, this.slot.getNomeSlot());
 			this.slot.processar(moeda);
 		} else {
-			System.out.printf("moeda de %d é inválida.\n", moeda.getValor());
+			System.out.printf("moeda de %d nao tem validacao.\n", moeda.getValor());
 		}
 	}
 
