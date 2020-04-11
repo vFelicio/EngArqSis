@@ -36,7 +36,7 @@ public class HandlerTest {
 		h14.setHandler(h15);
 		
 		for(int i = 0; i < 100; i++)
-		h1.processa();
+		h1.handleRequest();
 		
 	}
 

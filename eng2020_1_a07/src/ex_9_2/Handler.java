@@ -10,13 +10,13 @@ public class Handler {
 		this.nome = nome;
 	}
 	
-	public void processa() {
+	public void handleRequest() {
 		long tempo = System.currentTimeMillis();
 		long tt = tempo - this.temporizador;
 		
 		if (tt < 20) { //200 milissegundos foram alterados para 20 milissegundos.
 			System.out.println("Handler "+nome+" ocupado. Requisicao sera enviada para o Handler "+this.handler.getNome());
-			this.handler.processa();
+			this.handler.handleRequest();
 		}else if (this.handler != null) {
 			this.temporizador = tempo;
 			System.out.println("Handler "+nome+" processou.");
